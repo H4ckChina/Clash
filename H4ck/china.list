@@ -11,9 +11,9 @@ DOMAIN-SUFFIX,h4ckchina.com
 # DOMAIN,www.xxx.com
 
 # IP段匹配
-IP-CIDR,154.91.179.28/24,no-resolve
-IP-CIDR,45.131.179.4/24,no-resolve
-IP-CIDR,45.197.149.76/24,no-resolve
+IP-CIDR,154.91.179.28/32,no-resolve
+IP-CIDR,45.131.179.4/32,no-resolve
+IP-CIDR,45.197.149.76/32,no-resolve
 
 # 进程名称匹配
 PROCESS-NAME,mstsc.exe
