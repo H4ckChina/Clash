@@ -4,4 +4,5 @@
 # DOMAIN-KEYWORD,baidu
 
 # 域名后缀匹配
-# DOMAIN-SUFFIX,xxx.com
+# IP地址查询
+DOMAIN-SUFFIX,ipify.org
