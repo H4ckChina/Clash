@@ -19,4 +19,4 @@ IP-CIDR,45.131.179.4/32,no-resolve
 IP-CIDR,45.197.149.76/32,no-resolve
 
 # 进程名称匹配
-PROCESS-NAME,Mstsc.exe
+PROCESS-NAME,mstsc.exe
