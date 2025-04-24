@@ -1,4 +1,4 @@
-# 禁止连接访问（广告过滤）
+# 屏蔽补充列表（AD Block）
 
 # 域名关键字匹配
 # DOMAIN-KEYWORD,baidu
@@ -10,4 +10,3 @@ DOMAIN-SUFFIX,internetdownloadmanager.com
 
 # 完整域名匹配
 # DOMAIN,www.xxx.com
-
