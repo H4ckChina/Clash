@@ -1,9 +1,13 @@
-# NAME: ALL No
-# AUTHOR: H4ck
-# DOMAIN: 0
-# DOMAIN-KEYWORD: 0
-# DOMAIN-SUFFIX: 3
+# 禁止连接访问（广告过滤）
 
-DOMAIN-SUFFIX,internetdownloadmanager.com
-DOMAIN-SUFFIX,registeridm.com
+# 域名关键字匹配
+# DOMAIN-KEYWORD,baidu
+
+# 域名后缀匹配
 DOMAIN-SUFFIX,tonec.com
+DOMAIN-SUFFIX,registeridm.com
+DOMAIN-SUFFIX,internetdownloadmanager.com
+
+# 完整域名匹配
+# DOMAIN,www.xxx.com
+
