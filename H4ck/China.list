@@ -1,15 +1,17 @@
-# NAME: China
-# AUTHOR: H4ck
-# DOMAIN: 0
-# DOMAIN-KEYWORD: 0
-# DOMAIN-SUFFIX: 0
+# 直连补充列表(国内域名不解析时，防止走代理使用)
 
+# 域名关键字匹配
+# DOMAIN-KEYWORD,baidu
+
+# 域名后缀匹配
+# DOMAIN-SUFFIX,xxx.com
 DOMAIN-SUFFIX,istoreos.com
 DOMAIN-SUFFIX,h4ckchina.com
 
-IP-CIDR,107.172.235.55/24,no-resolve
-IP-CIDR,142.171.45.141/24,no-resolve
-IP-CIDR,156.226.170.220/24,no-resolve
-IP-CIDR,154.83.98.6/24,no-resolve
-IP-CIDR,45.131.179.4/24,no-resolve
-IP-CIDR,45.197.149.76/24,no-resolve
+# IP段匹配
+IP-CIDR,107.172.235.55/32,no-resolve
+IP-CIDR,142.171.45.141/32,no-resolve
+IP-CIDR,156.226.170.220/32,no-resolve
+IP-CIDR,154.83.98.6/32,no-resolve
+IP-CIDR,45.131.179.4/32,no-resolve
+IP-CIDR,45.197.149.76/32,no-resolve
