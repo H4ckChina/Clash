@@ -1,15 +1,6 @@
 # 屏蔽补充列表（AD Block）
 
-# 域名关键字匹配
-
-# DOMAIN-KEYWORD,baidu
-
 # 域名后缀匹配
-
 DOMAIN-SUFFIX,tonec.com
 DOMAIN-SUFFIX,registeridm.com
 DOMAIN-SUFFIX,internetdownloadmanager.com
-
-# 完整域名匹配
-
-# DOMAIN,www.xxx.com
