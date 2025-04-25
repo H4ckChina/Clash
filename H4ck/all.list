@@ -1,8 +1,9 @@
 # 国外补充列表(国外域名不解析时，走代理使用)
 
 # 域名关键字匹配
+
 # DOMAIN-KEYWORD,baidu
 
 # 域名后缀匹配
-# IP地址查询
+
 DOMAIN-SUFFIX,ipify.org
