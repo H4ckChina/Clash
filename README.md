@@ -2,4 +2,8 @@
 
 面板图标
 
-https://icon-sets.iconify.design/
+https://icon-sets.iconify.design
+
+加速网址
+
+https://xiake.pro
