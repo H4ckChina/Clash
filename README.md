@@ -6,4 +6,4 @@ https://icon-sets.iconify.design
 
 加速网址
 
-https://xiake.pro
+https://github.geekery.cn
