@@ -1,7 +1,7 @@
 # 直连补充列表(国内域名不解析时，防止走代理使用)
 
 # 域名后缀匹配
-DOMAIN-SUFFIX,cn
-DOMAIN-SUFFIX,istoreos.com
-DOMAIN-SUFFIX,h4ckchina.com
-DOMAIN-SUFFIX,xinyuy.com
+# DOMAIN-SUFFIX,cn
+# DOMAIN-SUFFIX,istoreos.com
+# DOMAIN-SUFFIX,h4ckchina.com
+# DOMAIN-SUFFIX,xinyuy.com
