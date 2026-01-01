@@ -1,12 +1,12 @@
 # OpenClash 规则
 
 面板图标  
-```bash
+```
 https://icon-sets.iconify.design  
 ```
 
 加速网址
-```bash
+```
 https://github.geekery.cn  
 ```
 
