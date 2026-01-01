@@ -9,9 +9,9 @@ https://icon-sets.iconify.design
 https://github.geekery.cn  
 
 订阅转换服务地址
-
+```bash
 https://psub.888005.xyz/sub
-
+```
 
 排除节点
 ```bash
