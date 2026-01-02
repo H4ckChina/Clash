@@ -131,7 +131,7 @@ proxy-groups:
   -  {name: 新加坡故转, type: fallback, include-all: true, interval: 300, filter: "(?=.*(新|SG|(?i)Singapore))^((?!(港|台|日|韩|美|官网|到期|剩余|套餐|流量|重置)).)*$"}
   -  {name: 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新|官网|到期|剩余|套餐|流量|重置)).)*$"}
   -  {name: 美国故转, type: fallback, include-all: true, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新|官网|到期|剩余|套餐|流量|重置)).)*$"}
-  -  {name: 所有自动, type: url-test, include-all: true}
+  -  {name: 所有自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(官网|到期|剩余|套餐|流量|重置)).)*$"}
   -  {name: 其他自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(港|HK|Hong|台|TW|日|JP|Japan|韩|KR|Korea|新SG|Singapore||美|US|America|官网|到期|剩余|套餐|流量|重置)).)*$"}
 
 # 规则匹配
