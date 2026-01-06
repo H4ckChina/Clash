@@ -6,8 +6,8 @@
 
 proxy-providers:
 
-  良心云:
-    url: "https://liangxin.xyz/api/v1/liangxin?OwO=ca82e1341cc12004783f12f46f654414"
+  H4ck:
+    url: "http://192.168.100.1:3030/CKg3abstVnOeRpm1aB5G/download/collection/H4ck"
     type: http
     interval: 86400
     health-check:
@@ -16,18 +16,8 @@ proxy-providers:
       interval: 300
     proxy: 直连 
 
-  Mitce:
-    url: "https://app.mitce.net/?sid=415937&token=srvhcyoy"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连 
-    
   顺畅网络:
-    url: "https://scurl.izenny.com/api/v1/client/subscribe?token=44adf18dbe3e285cd40c1d75419d3095"
+    url: "http://192.168.100.1:3030/CKg3abstVnOeRpm1aB5G/download/%E9%A1%BA%E7%95%85%E7%BD%91%E7%BB%9C"
     type: http
     interval: 86400
     health-check:
@@ -53,12 +43,6 @@ allow-lan: true
 mode: rule
 log-level: info
 
-# external-controller: 0.0.0.0:9090
-# external-ui: ui
-# external-ui-name: zashboard
-# external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
-# secret: "123456"
-
 # ========================
 # DNS 设置
 # ========================
@@ -67,7 +51,7 @@ dns:
   listen: 0.0.0.0:7874
   ipv6: false
   enhanced-mode: fake-ip
-  fake-ip-range: 198.20.0.1/16
+  fake-ip-range: 198.18.0.1/16
   nameserver:
     - 223.5.5.5
   fake-ip-filter-mode: blacklist
@@ -121,6 +105,22 @@ default: &default
     - 直连
     - 拒绝
 
+America: &America
+  type: select
+  proxies:
+    - 美国-故转
+    - 香港-故转
+    - 台湾-故转
+    - 日本-故转
+    - 韩国-故转
+    - 新加坡-故转
+    - 所有-自动
+    - 所有-手动
+    - 其他-自动
+    - 其他-手动
+    - 直连
+    - 拒绝
+
 China: &China
   type: select
   proxies:
@@ -139,9 +139,9 @@ proxy-groups:
   - {name: TikTok, <<: *default}
   - {name: Telegram, <<: *default}
   - {name: GitHub, <<: *default}
-  - {name: ChatGPT, <<: *default}
-  - {name: Microsoft, <<: *default}
-  - {name: Copilot, <<: *default}
+  - {name: ChatGPT, <<: *America}
+  - {name: Microsoft, <<: *America}
+  - {name: Copilot, <<: *America}
   - {name: Block, <<: *AdBlock}
   - {name: 国内网站, <<: *China}
   - {name: 国外网站, <<: *default}
@@ -157,51 +157,6 @@ proxy-groups:
       - 香港-自动
       - 香港-手动
 
-  # 台湾组
-  - name: 台湾-故转
-    type: fallback
-    interval: 300
-    lazy: false
-    proxies:
-      - 台湾-自动
-      - 台湾-手动
-
-  # 日本组
-  - name: 日本-故转
-    type: fallback
-    interval: 300
-    lazy: false
-    proxies:
-      - 日本-自动
-      - 日本-手动
-
-  # 韩国组
-  - name: 韩国-故转
-    type: fallback
-    interval: 300
-    lazy: false
-    proxies:
-      - 韩国-自动
-      - 韩国-手动
-
-  # 美国组
-  - name: 美国-故转
-    type: fallback
-    interval: 300
-    lazy: false
-    proxies:
-      - 美国-自动
-      - 美国-手动
-
-  # 新加坡组
-  - name: 新加坡-故转
-    type: fallback
-    interval: 300
-    lazy: false
-    proxies:
-      - 新加坡-自动
-      - 新加坡-手动
-
   - name: 香港-自动
     type: url-test
     include-all: true
@@ -212,6 +167,15 @@ proxy-groups:
     type: select
     include-all: true
     filter: "(?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
+
+  # 台湾组
+  - name: 台湾-故转
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 台湾-自动
+      - 台湾-手动
 
   - name: 台湾-自动
     type: url-test
@@ -224,6 +188,15 @@ proxy-groups:
     include-all: true
     filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$"
 
+  # 日本组
+  - name: 日本-故转
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 日本-自动
+      - 日本-手动
+
   - name: 日本-自动
     type: url-test
     include-all: true
@@ -234,6 +207,15 @@ proxy-groups:
     type: select
     include-all: true
     filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
+
+  # 韩国组
+  - name: 韩国-故转
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 韩国-自动
+      - 韩国-手动
 
   - name: 韩国-自动
     type: url-test
@@ -246,6 +228,15 @@ proxy-groups:
     include-all: true
     filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
 
+  # 美国组
+  - name: 美国-故转
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 美国-自动
+      - 美国-手动
+
   - name: 美国-自动
     type: url-test
     include-all: true
@@ -256,6 +247,15 @@ proxy-groups:
     type: select
     include-all: true
     filter: "(?=.*(广美|US|美国|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$"
+
+  # 新加坡组
+  - name: 新加坡-故转
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 新加坡-自动
+      - 新加坡-手动
 
   - name: 新加坡-自动
     type: url-test
@@ -295,19 +295,20 @@ proxy-groups:
 
 # ========================
 # 规则引擎（rules）
+# - RULE-SET,China / Domain,国内网站
 # ========================
 rules:
 
   - RULE-SET,TEST / Domain,TEST
-  - RULE-SET,Block / Domain,Block  
-  - RULE-SET,ChatGPT / Domain,ChatGPT
-  - RULE-SET,Copilot / Domain,Copilot
-  - RULE-SET,GitHub / Domain,GitHub
-  - RULE-SET,Telegram / Domain,Telegram
-  - RULE-SET,Telegram / IP,Telegram,no-resolve
-  - RULE-SET,Microsoft / Domain,Microsoft
+  - RULE-SET,Block / Domain,Block
   - RULE-SET,Youtube / Domain,YouTube
   - RULE-SET,TikTok / Domain,TikTok
+  - RULE-SET,Telegram / Domain,Telegram
+  - RULE-SET,Telegram / IP,Telegram,no-resolve
+  - RULE-SET,GitHub / Domain,GitHub
+  - RULE-SET,ChatGPT / Domain,ChatGPT
+  - RULE-SET,Microsoft / Domain,Microsoft
+  - RULE-SET,Copilot / Domain,Copilot
   - RULE-SET,Proxy / Domain,国外网站
   - RULE-SET,Globe / Domain,国外网站
   - RULE-SET,Direct / Domain,国内网站
@@ -318,7 +319,7 @@ rules:
 
 # ========================
 # 规则集提供者
-#  Instagram / Domain: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Instagram/Instagram.list"}
+#  Instagram / Domain: { <<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Instagram/Instagram.list"}
 #  Netflix / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/netflix.mrs"}
 #  Netflix / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/netflix.mrs"}
 #  Google / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"}  
@@ -331,18 +332,19 @@ rule-anchor:
 
 rule-providers:
   TEST / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Check.list"}
-  ChatGPT / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
-  Copilot / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Copilot.list"}
-  GitHub / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs"}
+  Block / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/H4ckChina/Clash/refs/heads/main/H4ck/Block.list"}
+
+  Youtube / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"} 
+  TikTok / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs"}
   Telegram / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs"}  
   Telegram / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs"}
+  GitHub / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs"}
+  ChatGPT / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
   Microsoft / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"}
-  TikTok / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/tiktok.mrs"}
-  Proxy / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Proxy.list"}
+  Copilot / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Copilot.list"}
+  Proxy / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/proxy.mrs"}
   Globe / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list"} 
-  Block / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/H4ckChina/Clash/refs/heads/main/H4ck/Block.list"}
   Direct / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Direct.list"}
-  Private / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs"}
   China / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
   China / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs"}
-  Youtube / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"}  
+  Private / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs"}
