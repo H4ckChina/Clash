@@ -29,3 +29,9 @@ https://psub.888005.xyz/sub
 ```bash
 官网|到期|剩余|套餐|流量|重置
 ```
+
+
+节点正则命名
+```bash
+https://raw.githubusercontent.com/Keywos/rule/main/rename.js
+```
