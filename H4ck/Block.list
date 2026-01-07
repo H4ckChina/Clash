@@ -1,6 +1,9 @@
 # 屏蔽补充列表（AD Block）
+# DOMAIN	DOMAIN,google.com	精确匹配	只匹配完全等于 google.com
+# DOMAIN-SUFFIX	DOMAIN-SUFFIX,google.com	后缀匹配	匹配所有以 google.com 结尾的域名
+# DOMAIN-KEYWORD	DOMAIN-KEYWORD,google	包含匹配	只要域名里包含 google 就匹配
 
-# 域名后缀匹配
+# IDM 域名后缀匹配
 DOMAIN-SUFFIX,tonec.com
 DOMAIN-SUFFIX,registeridm.com
 DOMAIN-SUFFIX,internetdownloadmanager.com
