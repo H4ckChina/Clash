@@ -1,1 +1,14 @@
-1
+# 直连补充列表（China Direct）
+# DOMAIN	DOMAIN,google.com	精确匹配	只匹配完全等于 google.com
+# DOMAIN-SUFFIX	DOMAIN-SUFFIX,google.com	后缀匹配	匹配所有以 google.com 结尾的域名
+# DOMAIN-KEYWORD	DOMAIN-KEYWORD,google	包含匹配	只要域名里包含 google 就匹配
+
+# 自己域名后缀匹配
+DOMAIN-SUFFIX,ookk.us
+# 门罗域名后缀匹配
+DOMAIN-SUFFIX,getmonero.cc
+# 机场域名后缀匹配
+DOMAIN-SUFFIX,liangxin.xyz
+DOMAIN-SUFFIX,mitce.net
+DOMAIN-SUFFIX,izenny.com
+DOMAIN-SUFFIX,omtrdc.net
