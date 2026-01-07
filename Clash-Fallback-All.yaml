@@ -59,13 +59,6 @@ dns:
     - +.lan
     - +.local
     - geosite:cn
-# 机场直连    
-    - +.liangxin.xyz
-    - +.mitce.net
-    - +.izenny.com
-# 自定义直连     
-    - +.getmonero.cc
-    - +.ookk.us
 
 ipv6: false
 
@@ -362,7 +355,7 @@ rule-providers:
   Copilot / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Copilot.list"}
   Proxy / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/proxy.mrs"}
   Globe / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list"} 
-  Direct / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Direct.list"}
+  Direct / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/H4ckChina/Clash/refs/heads/main/H4ck/Direct.list"}
   China / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"}
   China / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs"}
   Private / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/private.mrs"}
