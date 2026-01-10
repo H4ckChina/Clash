@@ -97,6 +97,19 @@ default: &default
     - 其他-故转
     - 所有-故转
 
+Proxy: &Proxy
+  type: select
+  proxies:
+    - 香港-故转
+    - 台湾-故转
+    - 日本-故转
+    - 韩国-故转
+    - 美国-故转
+    - 新加坡-故转
+    - 其他-故转
+    - 所有-故转
+    - 直连
+
 America: &America
   type: select
   proxies:
@@ -140,17 +153,17 @@ proxy-groups:
   - {name: Netflix, <<: *default}
   - {name: Twitter, <<: *default}
 
-  - {name: Google, <<: *default}
+  - {name: Google, <<: *America}
   - {name: Cloudflare, <<: *default}
 
   - {name: Apple, <<: *default}
   - {name: Microsoft, <<: *America}
 
   - {name: 国内网站, <<: *China}
-  - {name: 国外网站, <<: *default}
+  - {name: 国外网站, <<: *Proxy}
 
   - {name: Block, <<: *AdBlock}
-  - {name: 漏网之鱼, <<: *default}
+  - {name: 漏网之鱼, <<: *Proxy}
 
   # 香港组
   - name: 香港-故转
