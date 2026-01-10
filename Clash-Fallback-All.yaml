@@ -411,7 +411,7 @@ rule-providers:
   Cloudflare / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cloudflare.mrs"}
 
   Apple / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.mrs"}
-  Apple / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/apple.mrs"}
+  Apple / IP: {<<: *ip, url: "https://gh-proxy.com/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geoip/apple.mrs"}
   Microsoft / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"}
 
   Proxy / Domain: {<<: *domain, url: "https://gh-proxy.com/github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/proxy.mrs"}
