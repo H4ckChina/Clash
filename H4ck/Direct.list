@@ -8,11 +8,9 @@ DOMAIN-SUFFIX,ookk.us
 # 门罗域名后缀匹配
 DOMAIN-SUFFIX,getmonero.cc
 # 机场域名后缀匹配
-DOMAIN-SUFFIX,liangxin.xyz
-DOMAIN-SUFFIX,mitce.net
 DOMAIN-SUFFIX,gotozd.com
-
-
+DOMAIN-SUFFIX,dbf88.sbs
+DOMAIN-SUFFIX,ztfbygw.sbs
 
 # 直连补充列表(国内域名不解析时，防止走代理使用)
 
