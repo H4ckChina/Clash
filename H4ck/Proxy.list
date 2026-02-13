@@ -4,7 +4,6 @@
 # DOMAIN-KEYWORD	DOMAIN-KEYWORD,google	包含匹配	只要域名里包含 google 就匹配
 
 # 流媒体
-DOMAIN-SUFFIX,stripchat.com
 DOMAIN-SUFFIX,xiaoxintv.cc
 DOMAIN-SUFFIX,nycvod.com
 DOMAIN-SUFFIX,olevod.com
