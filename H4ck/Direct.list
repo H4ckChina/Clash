@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,dbf88.sbs
 DOMAIN-SUFFIX,ztfbygw.sbs
 # 个人域名后缀匹配
 DOMAIN-SUFFIX,175dt.com
+DOMAIN-SUFFIX,175lg.com
 
 # 直连补充列表(国内域名不解析时，防止走代理使用)
 
