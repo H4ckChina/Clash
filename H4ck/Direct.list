@@ -4,7 +4,6 @@
 # DOMAIN-KEYWORD	DOMAIN-KEYWORD,google	包含匹配	只要域名里包含 google 就匹配
 
 # 自己域名后缀匹配
-DOMAIN-SUFFIX,ookk.us
 # 门罗域名后缀匹配
 DOMAIN-SUFFIX,getmonero.cc
 # 机场域名后缀匹配
