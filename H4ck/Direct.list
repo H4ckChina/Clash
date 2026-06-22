@@ -4,12 +4,17 @@
 # DOMAIN-KEYWORD	DOMAIN-KEYWORD,google	包含匹配	只要域名里包含 google 就匹配
 
 # 自己域名后缀匹配
+
 # 门罗域名后缀匹配
 DOMAIN-SUFFIX,getmonero.cc
+
 # 机场域名后缀匹配
 DOMAIN-SUFFIX,gotozd.com
 DOMAIN-SUFFIX,dbf88.sbs
 DOMAIN-SUFFIX,ztfbygw.sbs
+DOMAIN-SUFFIX,shunc.xyz
+DOMAIN-SUFFIX,良心云.com
+
 # 个人域名后缀匹配
 DOMAIN-SUFFIX,175dt.com
 DOMAIN-SUFFIX,175lg.com
