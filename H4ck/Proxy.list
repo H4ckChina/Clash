@@ -1,13 +1,320 @@
-# 代理补充列表（Proxy）
-# DOMAIN	DOMAIN,google.com	精确匹配	只匹配完全等于 google.com
-# DOMAIN-SUFFIX	DOMAIN-SUFFIX,google.com	后缀匹配	匹配所有以 google.com 结尾的域名
-# DOMAIN-KEYWORD	DOMAIN-KEYWORD,google	包含匹配	只要域名里包含 google 就匹配
+# ==============================================================
+# Proxy.list  —  强制代理清单
+# 维护：H4ckChina         更新：2026-11-05
+# --------------------------------------------------------------
+# 【怎么用】只改「一、我自己的」；下面「二、通用」是大众清单，一般不用动
+# 【格式】
+#   DOMAIN-SUFFIX,example.com      该域名及其所有子域
+#   DOMAIN,example.com             精确匹配
+#   DOMAIN-KEYWORD,keyword         域名里含该关键字
+#   IP-CIDR,1.2.3.0/24,no-resolve  该 IP 段
+# 【原则】命中这里 = 走「节点选择」组（默认 = 自动优选，全局最快节点）
+# 【注意】国外 AI 主力域名已在 config.yaml 里内联，走独立的「AI」组，
+#         那个组可以单独锁美国/日本节点，不用在这里重复维护
+# ==============================================================
 
-# 流媒体
-DOMAIN-SUFFIX,xiaoxintv.cc
-DOMAIN-SUFFIX,dytt-film.com
-DOMAIN-SUFFIX,nycvod.com
-DOMAIN-SUFFIX,olevod.com
-DOMAIN-SUFFIX,olelive.com
-DOMAIN-SUFFIX,ondemandchina.com
-DOMAIN-SUFFIX,pool.ntp.org
+
+# ============================================================
+# 一、我自己的（只改这一段）
+# ============================================================
+
+# --- 我常用的站 ---
+DOMAIN-SUFFIX,supjav.com
+DOMAIN-SUFFIX,supjav.cc
+DOMAIN-SUFFIX,supjav.la
+
+# --- 在这里往下加你自己要代理的域名 ---
+# DOMAIN-SUFFIX,example.com
+
+
+# ============================================================
+# 二、通用（大众清单，一般不用动）
+# ============================================================
+
+# ---------- Google 系（AI 相关见 config.yaml 的 AI 组）----------
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,google.com.hk
+DOMAIN-SUFFIX,google.co.jp
+DOMAIN-SUFFIX,google.dev
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,1e100.net
+DOMAIN-SUFFIX,withgoogle.com
+DOMAIN-SUFFIX,goo.gl
+DOMAIN-SUFFIX,recaptcha.net
+DOMAIN-SUFFIX,gmail.com
+
+# ---------- 维基 ----------
+DOMAIN-SUFFIX,wikipedia.org
+DOMAIN-SUFFIX,wikimedia.org
+DOMAIN-SUFFIX,wiktionary.org
+DOMAIN-SUFFIX,wikidata.org
+DOMAIN-SUFFIX,mediawiki.org
+
+# ---------- 社交 / 论坛 ----------
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redditstatic.com
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,messenger.com
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,quora.com
+DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,substack.com
+DOMAIN-SUFFIX,patreon.com
+DOMAIN-SUFFIX,onlyfans.com
+DOMAIN-SUFFIX,imgur.com
+DOMAIN-SUFFIX,giphy.com
+DOMAIN-SUFFIX,pinterest.com
+DOMAIN-SUFFIX,pinimg.com
+DOMAIN-SUFFIX,tumblr.com
+DOMAIN-SUFFIX,9gag.com
+DOMAIN-SUFFIX,producthunt.com
+DOMAIN-SUFFIX,ycombinator.com
+
+# ---------- 流媒体 / 音乐 ----------
+DOMAIN-SUFFIX,netflix.com
+DOMAIN-SUFFIX,nflxvideo.net
+DOMAIN-SUFFIX,nflximg.net
+DOMAIN-SUFFIX,nflxso.net
+DOMAIN-SUFFIX,nflxext.com
+DOMAIN-SUFFIX,hulu.com
+DOMAIN-SUFFIX,disneyplus.com
+DOMAIN-SUFFIX,dssott.com
+DOMAIN-SUFFIX,bamgrid.com
+DOMAIN-SUFFIX,hbomax.com
+DOMAIN-SUFFIX,max.com
+DOMAIN-SUFFIX,primevideo.com
+DOMAIN-SUFFIX,media-amazon.com
+DOMAIN-SUFFIX,spotify.com
+DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,spotifycdn.com
+DOMAIN-SUFFIX,soundcloud.com
+DOMAIN-SUFFIX,sndcdn.com
+DOMAIN-SUFFIX,twitch.tv
+DOMAIN-SUFFIX,ttvnw.net
+DOMAIN-SUFFIX,jtvnw.net
+DOMAIN-SUFFIX,crunchyroll.com
+DOMAIN-SUFFIX,vrv.co
+DOMAIN-SUFFIX,abema.tv
+DOMAIN-SUFFIX,viu.com
+
+# ---------- 开发工具链 ----------
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,github.blog
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,bitbucket.org
+DOMAIN-SUFFIX,npmjs.com
+DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,nodejs.org
+DOMAIN-SUFFIX,pypi.org
+DOMAIN-SUFFIX,python.org
+DOMAIN-SUFFIX,files.pythonhosted.org
+DOMAIN-SUFFIX,crates.io
+DOMAIN-SUFFIX,rust-lang.org
+DOMAIN-SUFFIX,rustup.rs
+DOMAIN-SUFFIX,golang.org
+DOMAIN-SUFFIX,go.dev
+DOMAIN-SUFFIX,proxy.golang.org
+DOMAIN-SUFFIX,maven.org
+DOMAIN-SUFFIX,gradle.org
+DOMAIN-SUFFIX,jetbrains.com
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,ghcr.io
+DOMAIN-SUFFIX,quay.io
+DOMAIN-SUFFIX,gcr.io
+DOMAIN-SUFFIX,kubernetes.io
+DOMAIN-SUFFIX,terraform.io
+DOMAIN-SUFFIX,hashicorp.com
+DOMAIN-SUFFIX,stackoverflow.com
+DOMAIN-SUFFIX,stackexchange.com
+DOMAIN-SUFFIX,sstatic.net
+DOMAIN-SUFFIX,dev.to
+DOMAIN-SUFFIX,developer.mozilla.org
+DOMAIN-SUFFIX,electronjs.org
+DOMAIN-SUFFIX,vitejs.dev
+DOMAIN-SUFFIX,vuejs.org
+DOMAIN-SUFFIX,react.dev
+DOMAIN-SUFFIX,nextjs.org
+DOMAIN-SUFFIX,svelte.dev
+DOMAIN-SUFFIX,deno.land
+DOMAIN-SUFFIX,bun.sh
+DOMAIN-SUFFIX,tauri.app
+
+# ---------- 云 / 托管控制台 ----------
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,aws.amazon.com
+DOMAIN-SUFFIX,amazonaws.com
+DOMAIN-SUFFIX,azure.com
+DOMAIN-SUFFIX,azurewebsites.net
+DOMAIN-SUFFIX,cloud.google.com
+DOMAIN-SUFFIX,vercel.com
+DOMAIN-SUFFIX,vercel.app
+DOMAIN-SUFFIX,netlify.app
+DOMAIN-SUFFIX,herokuapp.com
+DOMAIN-SUFFIX,digitalocean.com
+DOMAIN-SUFFIX,vultr.com
+DOMAIN-SUFFIX,linode.com
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,workers.dev
+DOMAIN-SUFFIX,pages.dev
+DOMAIN-SUFFIX,supabase.co
+DOMAIN-SUFFIX,firebaseio.com
+DOMAIN-SUFFIX,railway.app
+DOMAIN-SUFFIX,render.com
+DOMAIN-SUFFIX,fly.io
+DOMAIN-SUFFIX,neon.tech
+DOMAIN-SUFFIX,planetscale.com
+DOMAIN-SUFFIX,mongodb.com
+
+# ---------- 协作 / 办公 ----------
+DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,notion.site
+DOMAIN-SUFFIX,figma.com
+DOMAIN-SUFFIX,canva.com
+DOMAIN-SUFFIX,slack.com
+DOMAIN-SUFFIX,zoom.us
+DOMAIN-SUFFIX,trello.com
+DOMAIN-SUFFIX,atlassian.com
+DOMAIN-SUFFIX,atlassian.net
+DOMAIN-SUFFIX,linear.app
+DOMAIN-SUFFIX,asana.com
+DOMAIN-SUFFIX,airtable.com
+DOMAIN-SUFFIX,miro.com
+DOMAIN-SUFFIX,dropbox.com
+DOMAIN-SUFFIX,dropboxusercontent.com
+DOMAIN-SUFFIX,box.com
+DOMAIN-SUFFIX,mega.nz
+
+# ---------- 游戏平台（国服直连的不要放进来）----------
+DOMAIN-SUFFIX,steamcommunity.com
+DOMAIN-SUFFIX,steamstatic.com
+DOMAIN-SUFFIX,epicgames.com
+DOMAIN-SUFFIX,ea.com
+DOMAIN-SUFFIX,ubisoft.com
+DOMAIN-SUFFIX,gog.com
+DOMAIN-SUFFIX,nexusmods.com
+DOMAIN-SUFFIX,curseforge.com
+DOMAIN-SUFFIX,modrinth.com
+
+# ---------- 新闻 / 媒体 ----------
+DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,cnn.com
+DOMAIN-SUFFIX,nytimes.com
+DOMAIN-SUFFIX,reuters.com
+DOMAIN-SUFFIX,bloomberg.com
+DOMAIN-SUFFIX,wsj.com
+DOMAIN-SUFFIX,economist.com
+DOMAIN-SUFFIX,theguardian.com
+DOMAIN-SUFFIX,voanews.com
+DOMAIN-SUFFIX,rfa.org
+DOMAIN-SUFFIX,dw.com
+DOMAIN-SUFFIX,aljazeera.com
+DOMAIN-SUFFIX,archive.org
+
+# ---------- 隐私 / 通信 ----------
+DOMAIN-SUFFIX,proton.me
+DOMAIN-SUFFIX,protonmail.com
+DOMAIN-SUFFIX,tutanota.com
+DOMAIN-SUFFIX,signal.org
+DOMAIN-SUFFIX,torproject.org
+
+# ---------- 国外 AI 长尾（主力在 config.yaml 的 AI 组）----------
+DOMAIN-SUFFIX,openrouter.ai
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,character.ai
+DOMAIN-SUFFIX,phind.com
+DOMAIN-SUFFIX,you.com
+DOMAIN-SUFFIX,llama.com
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,together.ai
+DOMAIN-SUFFIX,fireworks.ai
+DOMAIN-SUFFIX,replicate.com
+DOMAIN-SUFFIX,runpod.io
+DOMAIN-SUFFIX,modal.com
+DOMAIN-SUFFIX,lmstudio.ai
+DOMAIN-SUFFIX,ollama.com
+DOMAIN-SUFFIX,midjourney.com
+DOMAIN-SUFFIX,leonardo.ai
+DOMAIN-SUFFIX,ideogram.ai
+DOMAIN-SUFFIX,stability.ai
+DOMAIN-SUFFIX,dreamstudio.ai
+DOMAIN-SUFFIX,runwayml.com
+DOMAIN-SUFFIX,pika.art
+DOMAIN-SUFFIX,lumalabs.ai
+DOMAIN-SUFFIX,krea.ai
+DOMAIN-SUFFIX,recraft.ai
+DOMAIN-SUFFIX,civitai.com
+DOMAIN-SUFFIX,openart.ai
+DOMAIN-SUFFIX,heygen.com
+DOMAIN-SUFFIX,synthesia.io
+DOMAIN-SUFFIX,suno.com
+DOMAIN-SUFFIX,suno.ai
+DOMAIN-SUFFIX,udio.com
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,grammarly.com
+DOMAIN-SUFFIX,otter.ai
+DOMAIN-SUFFIX,cline.bot
+DOMAIN-SUFFIX,continue.dev
+DOMAIN-SUFFIX,tabnine.com
+DOMAIN-SUFFIX,zed.dev
+DOMAIN-SUFFIX,sourcegraph.com
+DOMAIN-SUFFIX,devin.ai
+DOMAIN-SUFFIX,cognition.ai
+DOMAIN-SUFFIX,bolt.new
+DOMAIN-SUFFIX,stackblitz.com
+DOMAIN-SUFFIX,lovable.dev
+DOMAIN-SUFFIX,v0.dev
+DOMAIN-SUFFIX,replit.com
+
+# ---------- 成人内容 ----------
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,xnxx.com
+DOMAIN-SUFFIX,xhamster.com
+DOMAIN-SUFFIX,redtube.com
+DOMAIN-SUFFIX,youporn.com
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,eporner.com
+DOMAIN-SUFFIX,missav.com
+DOMAIN-SUFFIX,javbus.com
+DOMAIN-SUFFIX,javdb.com
+DOMAIN-SUFFIX,hanime.tv
+DOMAIN-SUFFIX,e-hentai.org
+DOMAIN-SUFFIX,exhentai.org
+DOMAIN-SUFFIX,nhentai.net
+DOMAIN-SUFFIX,danbooru.donmai.us
+DOMAIN-SUFFIX,gelbooru.com
+DOMAIN-SUFFIX,rule34.xxx
+DOMAIN-SUFFIX,hitomi.la
+
+# ---------- 其它常被墙 ----------
+DOMAIN-SUFFIX,change.org
+DOMAIN-SUFFIX,pixiv.net
+DOMAIN-SUFFIX,pximg.net
+DOMAIN-SUFFIX,nicovideo.jp
+DOMAIN-SUFFIX,dlsite.com
+DOMAIN-SUFFIX,fc2.com
+DOMAIN-SUFFIX,linktr.ee
+DOMAIN-SUFFIX,bitly.com
+DOMAIN-SUFFIX,t.me
