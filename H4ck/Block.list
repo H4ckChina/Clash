@@ -1,4 +1,114 @@
-# 屏蔽补充列表（AD Block）
-# DOMAIN	DOMAIN,google.com	精确匹配	只匹配完全等于 google.com
-# DOMAIN-SUFFIX	DOMAIN-SUFFIX,google.com	后缀匹配	匹配所有以 google.com 结尾的域名
-# DOMAIN-KEYWORD	DOMAIN-KEYWORD,google	包含匹配	只要域名里包含 google 就匹配
+# ==============================================================
+# Block.list  —  禁止访问清单
+# 维护：H4ckChina         更新：2026-11-05
+# --------------------------------------------------------------
+# 【怎么用】只改「一、我自己的」；下面「二、通用」是大众清单，一般不用动
+# 【原则】只拦「纯广告 / 统计 / 挖矿」，不碰登录、支付、推送、验证码
+#         如果某个 App 打不开，先在面板把「Block」组切成「直连」验证是否误伤
+# 【格式】DOMAIN-SUFFIX,example.com  /  DOMAIN-KEYWORD,keyword
+# ==============================================================
+
+
+# ============================================================
+# 一、我自己的（只改这一段）
+# ============================================================
+
+# --- 在这里加你自己要拦的域名 ---
+# DOMAIN-SUFFIX,example.com
+
+
+# ============================================================
+# 二、通用（大众清单，一般不用动）
+# ============================================================
+
+# ---------- 国际广告平台 ----------
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,googletagservices.com
+DOMAIN-SUFFIX,adsafeprotected.com
+DOMAIN-SUFFIX,adnxs.com
+DOMAIN-SUFFIX,adsrvr.org
+DOMAIN-SUFFIX,rubiconproject.com
+DOMAIN-SUFFIX,pubmatic.com
+DOMAIN-SUFFIX,openx.net
+DOMAIN-SUFFIX,criteo.com
+DOMAIN-SUFFIX,criteo.net
+DOMAIN-SUFFIX,taboola.com
+DOMAIN-SUFFIX,outbrain.com
+DOMAIN-SUFFIX,moatads.com
+DOMAIN-SUFFIX,adcolony.com
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,vungle.com
+DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,chartboost.com
+DOMAIN-SUFFIX,adform.net
+DOMAIN-SUFFIX,smartadserver.com
+DOMAIN-SUFFIX,teads.tv
+DOMAIN-SUFFIX,spotxchange.com
+DOMAIN-SUFFIX,3lift.com
+DOMAIN-SUFFIX,casalemedia.com
+DOMAIN-SUFFIX,loopme.me
+DOMAIN-SUFFIX,smaato.net
+
+# ---------- 统计 / 埋点 ----------
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,scorecardresearch.com
+DOMAIN-SUFFIX,quantserve.com
+DOMAIN-SUFFIX,quantcount.com
+DOMAIN-SUFFIX,chartbeat.com
+DOMAIN-SUFFIX,chartbeat.net
+DOMAIN-SUFFIX,mixpanel.com
+DOMAIN-SUFFIX,hotjar.com
+DOMAIN-SUFFIX,hotjar.io
+DOMAIN-SUFFIX,fullstory.com
+DOMAIN-SUFFIX,clarity.ms
+DOMAIN-SUFFIX,heapanalytics.com
+DOMAIN-SUFFIX,plausible.io
+DOMAIN-SUFFIX,statcounter.com
+
+# ---------- 国内广告 / 统计 ----------
+DOMAIN-SUFFIX,cnzz.com
+DOMAIN-SUFFIX,talkingdata.com
+DOMAIN-SUFFIX,talkingdata.net
+DOMAIN-SUFFIX,tanx.com
+DOMAIN-SUFFIX,alimama.com
+DOMAIN-SUFFIX,pos.baidu.com
+DOMAIN-SUFFIX,cpro.baidu.com
+DOMAIN-SUFFIX,hm.baidu.com
+DOMAIN-SUFFIX,gdt.qq.com
+DOMAIN-SUFFIX,log.mmstat.com
+DOMAIN-SUFFIX,mmstat.com
+DOMAIN-SUFFIX,admaster.com.cn
+DOMAIN-SUFFIX,miaozhen.com
+DOMAIN-SUFFIX,umeng.com
+DOMAIN-SUFFIX,umeng.co
+DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,growingio.com
+DOMAIN-SUFFIX,getui.com
+DOMAIN-SUFFIX,jpush.cn
+
+# ---------- 关键字拦截 ----------
+DOMAIN-KEYWORD,-ads-
+DOMAIN-KEYWORD,adserver
+DOMAIN-KEYWORD,adservice
+
+# ---------- 挖矿脚本 ----------
+DOMAIN-SUFFIX,coinhive.com
+DOMAIN-SUFFIX,coin-hive.com
+DOMAIN-SUFFIX,crypto-loot.com
+DOMAIN-SUFFIX,webminepool.com
+DOMAIN-SUFFIX,minero.cc
+
+# ---------- 谨慎区：会误伤 App 功能，默认注释 ----------
+# 部分 App 的 SDK 被拦后会卡启动 / 卡登录 / 掉推送，需要时再逐条放开
+#DOMAIN-SUFFIX,appsflyer.com
+#DOMAIN-SUFFIX,adjust.com
+#DOMAIN-SUFFIX,kochava.com
+#DOMAIN-SUFFIX,branch.io
+#DOMAIN-SUFFIX,onesignal.com
+#DOMAIN-SUFFIX,amplitude.com
+#DOMAIN-SUFFIX,segment.io
+#DOMAIN-SUFFIX,connect.facebook.net
+#DOMAIN-SUFFIX,app-measurement.com
