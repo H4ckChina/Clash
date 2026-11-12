@@ -18,6 +18,7 @@
 
 # --- 我的域名 ---
 DOMAIN-SUFFIX,ookk.us
+DOMAIN-SUFFIX,supportxmr.com
 
 # --- 我的服务器 / 内网 ---
 IP-CIDR,23.160.193.71/32,no-resolve
